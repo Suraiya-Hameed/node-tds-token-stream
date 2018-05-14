@@ -550,7 +550,7 @@ describe('Parsing a RETURNVALUE token', function() {
         typeid = 0x3D;
         value = new Date('2004-05-23T14:25:10.487Z');
 
-        const datetime = Buffer.from('F09400009AA0ED00', 'hex'); //'2004-05-23T14:25:10.487Z'
+        const datetime = Buffer.alloc(8, 'F09400009AA0ED00', 'hex'); //'2004-05-23T14:25:10.487Z'
         data = Buffer.alloc(32);
         tempBuff.copy(data);
         // TYPE_INFO
